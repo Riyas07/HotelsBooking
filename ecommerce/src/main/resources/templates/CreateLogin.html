@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>RoyalHotels.com</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+                       div
+               {
+                   padding: 100px 100px; 
+                  position: absolute;
+                   transform: translate(74%,15%);
+                  background-color: whitesmoke;
+                  box-shadow:-3px 7px 15px #000;
+               }
+              div input{
+                   padding: 10px 20px;
+                   border: none;
+                   background-color: whitesmoke;
+                   color: #1b6d85;
+                   box-shadow: -3px 7px 15px #000;
+               }
+              div button
+               {
+                   padding: 17px 28px;
+                   border: none;
+                   background-color: tomato;
+                   cursor: pointer;
+                   box-shadow: -3px 7px 15px #000;
+                   border-radius: 20px
+               }
+               div button:hover
+               {
+                   opacity: 0.7;
+                   color: whitesmoke;
+               }
+               lable
+               {
+                   visibility: hidden;
+                   color: red;
+                   display: inline-block;
+               }
+               </style>
+    </head>
+    <body>
+        <div>
+            <form onsubmit="return check()" action="AddAccount" method="POST">
+            <lable id="ids">Invalid ID</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="fd" type="text" name="id" placeholder="Id"/>   
+            <br><br><br>
+            <lable id="username">Invalid User Name</lable>&nbsp;&nbsp;&nbsp;<input id="us" type="text" name="username" placeholder="user name"/>
+            <br><br><br>
+            <lable id="pass1">Invalid Password</lable>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="ps" type="password" name="password" placeholder="password"/>
+            <br><br><br>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<button type="submit" class="btn">Login</button>
+        </form>
+        </div>
+         <script>
+             function check()
+             {
+                 var ids=document.getElementById("fd");
+                   var username=document.getElementById("us");
+            var password=document.getElementById("ps");
+            console.log(ps+" ..........................");
+            if(ids.value.trim()=="")
+            {
+                document.getElementById("ids").style.visibility="visible";
+               return false;
+            }
+            if(username.value.trim()=="")
+            {
+            
+                document.getElementById("username").style.visibility="visible";
+               return false;
+            }
+            else if(password.value.trim()=="")
+            {
+                document.getElementById("pass1").style.visiblity="visible";
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+             }
+         </script>
+    </body>
+</html>

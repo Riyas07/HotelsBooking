@@ -1,0 +1,35 @@
+
+input{
+    background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+    color: whitesmoke;
+    border-radius: 20px;
+    font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  transform: translate(30%,-100%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+}
+button
+{
+   background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.4);
+    color: whitesmoke;
+    border-radius: 20px;
+    font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  transform: translate(230%, -50%);
+  z-index: 2;
+  width: 10%;
+  padding: 20px;
+  cursor: pointer;
+}
+div
+{
+    padding: 180px;
+    background-image: url("https://i.pinimg.com/originals/e0/d6/6a/e0d66a03fdf7fecce02b8b76e141d325.jpg");
+    background-size: 1200px 490px;
+}

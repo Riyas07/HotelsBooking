@@ -1,0 +1,96 @@
+
+th{
+    padding: 10px 15px;
+}
+td{
+    padding: 10px 15px;
+    color: cadetblue;
+    font-size: 100%;
+}
+#bt1
+{
+    padding: 10px 7px;
+    box-shadow: 3px 7px black;
+    cursor: pointer;
+    border: none;
+    border-radius: 10px;
+    background-color: #080808;
+    box-shadow: 4px 3px 18px #000;
+    color: #ffffff;
+}
+input{
+    padding: 17px 70px;
+    background-color: #e7e7e7;
+    border: none;
+    border-radius: 20px;
+    font-size: 140%;
+}
+#btns
+{
+    padding: 20px 20px;
+    background-color:#1b6d85;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.riyas
+{
+    display: inline-block;
+    width: 50%;
+    height: 40%;
+ background-color: white;
+ box-shadow: -3px 10px 18px #000;
+}
+.riyas p
+{
+     display: inline-block;
+ color: black;
+ font-size: 19px;
+ right: 10px
+}
+.riyas .imgs
+{
+     display: inline-block;
+    right: 10px
+}
+.top
+{
+      position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  border: 1px solid whitesmoke;
+    padding: 20px 100px;
+    background-color: #204d74;
+}
+.top a
+{
+    color: whitesmoke;
+    font-family: fantasy;
+    font-size: 20px;
+    text-decoration: none;
+     display: inline-block;
+}
+.top a:hover
+{
+transform:scale(1.6);
+  transition: all ease 400ms;
+  color: tomato;
+}
+.top .royal
+{
+    color: whitesmoke;
+}
+ .show
+        {
+            background-color: #8c7ae6;
+            border: none;
+            color: aliceblue;
+            width: 60px;
+            height: 60px;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            cursor: pointer;
+            display: none;
+        }

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>RoyalHotels.com</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <link th:href="@{/viewss/main.css}" rel="stylesheet">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
+        <div class="top">
+            <h1 class="royal">RoyalHotels.com</h1>
+      <a href="/"><i class="fa fa-home" aria-hidden="true"></i> Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="display"><i class="fa fa-bed" aria-hidden="true"></i> Hotels</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="contact"><i class="fa fa-envelope" aria-hidden="true"></i> Contact Us</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="login"><i class="fa fa-user" aria-hidden="true"></i> Login</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <a href="hotel"><i class="fa fa-search" aria-hidden="true"></i>ADD Hotels</a>&nbsp;
+       <a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Sign-out</a>
+        </div><br>
+          <form action="search">
+            <input type="text" name="search" placeholder="search Place "/>
+            <button id="btns" type="submit">Search</button>
+          </form><br><br>
+          <div th:each="user :${us}">
+                     <div class="riyas">
+                         <img class="imgs" alt="" th:src="*{'data:image/jpeg;base64,'+{user.image}}" style="width: 200px;height: 200px;"/>
+                         <lable><b>Hotel Name :</b></lable><p th:text="${user.name}"> </p>&nbsp;&nbsp;
+                         <lable><b>State :</b></lable><p th:text="${user.state}"></p>&nbsp;&nbsp;
+                     <lable><b>Place :</b></lable><p th:text="${user.city}"></p>&nbsp;&nbsp;
+                     <lable><b>Contact Number :</b></lable><p th:text="${user.phoneNumber}"></p>&nbsp;&nbsp;
+                     <form action="book">
+                      <button id="bt1" type="submit">Book Now</button>
+                     </form>
+                      <br>&nbsp;&nbsp;
+                     </div>
+                     <br><br><br>
+                 </div>
+          <button id="#button" class="show" type="button" title="Go To Top" ><i class="fa fa-arrow-up"></i></button>
+           <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+   <script>
+    $(document).ready(function(){
+  $(window).scroll(function(){
+ if($(window).scrollTop() >20)
+ {
+   $('.show').fadeIn();
+ }
+ else
+ {
+   $(".show").fadeOut();
+ }
+  });
+  $(".show").click(function(){
+   $("html,body").animate({
+ scrollTop :0
+   },600);
+  });
+    });
+  </script>
+    </body>
+</html>

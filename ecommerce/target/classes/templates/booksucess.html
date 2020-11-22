@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>RoyalHotels.com</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+           a
+           {
+               padding: 30px  30px;
+               color: whitesmoke;
+               background: #23527c;
+               text-decoration: none;
+                transform: translate(50%,3%);
+           }
+            
+            a:hover {
+                transform: scale(1.6);
+  transition:all ease 400ms;
+  color: tomato;
+  opacity: 1;
+  } 
+    
+            </style>
+    </head>
+    <body>
+        <h1 id="bs">Booked Successfully</h1>
+        <br><br>
+        <a id="bh" href="/">Back to Home</a>
+    </body>
+     <script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+    <script>
+        $("#bh").click(function()
+        {
+           $("#bh").effect("shake") ;
+        });
+       
+    </script>
+</html>
